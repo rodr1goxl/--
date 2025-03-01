@@ -1,0 +1,87 @@
+<!doctype html>
+<html> 
+ <head> 
+  <meta charset="utf-8"> 
+  <title>@rodr1go_xl</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="preload" href="./images/bg01.jpg" as="image"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script> 
+  <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        VANTA.BIRDS({
+          el: "#vanta",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: true,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          backgroundAlpha: 0.0,
+          color2: 0xff00f0,
+          wingSpan: 40.0,
+          separation: 100.0,
+          alignment: 77.0,
+          cohesion: 5.0,
+          quantity: 1.0,
+        });
+
+        setTimeout(() => {
+          const main = document.querySelector("main");
+          main.style.opacity = 1;
+          main.style.filter = "blur(0px)";
+        }, 1000);
+      });
+
+      function toggleMenu() {
+        document.querySelector(".menu-dropdown").classList.toggle("show");
+      }
+
+      function shareSite() {
+        if (navigator.share) {
+          navigator.share({
+            title: "@rodr1go_xl",
+            url: window.location.href
+          });
+        } else {
+          alert("Seu navegador não suporta compartilhamento.");
+        }
+      }
+  </script> 
+ </head> 
+ <body> 
+  <div id="vanta"></div> 
+  <main class="animated"> 
+   <header> 
+    <img src="https://i.imgur.com/oaGg7KT.jpeg"> 
+    <h1><em>@rodr1go_xl</em></h1> 
+    <button class="menu-button" onclick="toggleMenu()">
+      <img src="https://img.icons8.com/fluency-systems-regular/50/horizontal-settings-mixer--v2.png" alt="Menu">
+    </button>
+    <div class="menu-dropdown">
+     <button onclick="window.location.href='https://rodr1goxl.github.io/-/'">
+  <img src="https://img.icons8.com/fluency-systems-filled/50/crescent-moon.png" alt="Tema">
+  Tema
+</button>
+      <button onclick="shareSite()">
+        <img src="https://img.icons8.com/ios-glyphs/30/share-2--v1.png" alt="Compartilhar">
+        Compartilhar
+      </button>
+      <button onclick="toggleMenu()">
+        <img src="https://img.icons8.com/metro/26/multiply.png" alt="Fechar">
+        Fechar menu
+      </button>
+    </div>
+   </header> 
+   <ul> 
+    <li> <a href="https://pin.it/3dwAelA9z"><img src="https://img.icons8.com/ios-filled/50/pinterest--v1.png" alt="Pinterest" width="20"> Pinterest</a> </li> 
+    <li> <a href="https://www.instagram.com/rodr1go_xl?igsh=NTc4MTIwNjQ2YQ=="><img src="https://img.icons8.com/ios-filled/50/instagram-new--v2.png" alt="Instagram" width="20"> Instagram</a> </li> 
+    <li> <a href="https://discord.com/users/1131376676870307900"><img src="https://img.icons8.com/ios-filled/50/discord-logo.png" alt="Discord" width="20"> Discord </a> </li> 
+    <li> <a href="https://www.tiktok.com/@rodr1go_xl?_r=1&_d=edm11hgg07fi02"><img src="https://img.icons8.com/ios-filled/50/tiktok--v1.png" alt="Tiktok" width="20"> Tiktok</a> </li> 
+    <li> <a href="https://www.xbox.com/pt-BR/play/user/Rodrkskkdkd"><img src="https://img.icons8.com/ios-filled/50/xbox.png" alt="Xbox" width="20"> Xbox </a> </li> 
+   </ul> 
+  </main> 
+ </body>
+</html>
